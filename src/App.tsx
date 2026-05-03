@@ -168,8 +168,9 @@ export default function App() {
           ].map((item, idx) => (
             <div
               key={idx}
-              className={`${item.bg} p-12 transition-all flex flex-row items-center gap-8 justify-center text-center h-64 md:h-80 lg:h-[40vh]`}
+              className={`${item.bg} p-12 transition-all flex flex-row items-center gap-6 justify-center h-48 md:h-60 lg:h-[30vh]`}
             >
+              <Check className={`w-8 h-8 shrink-0 ${item.text}`} strokeWidth={3} />
               <h4 className={`font-bold text-3xl ${item.text}`}>{item.title}</h4>
             </div>
           ))}
@@ -198,8 +199,8 @@ export default function App() {
 
       {/* Our Offerings */}
       <section className="relative w-full" id="offerings">
-        <div className="bg-surface-container-lowest py-20 px-4">
-          <h2 className="text-4xl md:text-[48px] font-headline text-on-surface text-center leading-tight">
+        <div className="bg-coral py-20 px-4">
+          <h2 className="text-4xl md:text-[48px] font-headline text-white text-center leading-tight">
             Three Ways to Work With Us
           </h2>
         </div>
