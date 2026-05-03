@@ -306,29 +306,29 @@ export default function App() {
           </div>
 
           {/* Offering 3 */}
-          <div className="bg-coral text-white p-12 md:p-16 lg:p-20 flex flex-col h-full shadow-inner relative overflow-hidden">
+          <div className="bg-tertiary-container text-navy-night p-12 md:p-16 lg:p-20 flex flex-col h-full shadow-inner relative overflow-hidden">
             <div className="absolute inset-0 blueprint-grid opacity-10"></div>
             <div className="relative z-10 flex flex-col h-full">
-              <div className="w-12 h-12 bg-white/20 text-white rounded-full flex items-center justify-center font-bold text-lg mb-8 font-headline">
+              <div className="w-12 h-12 bg-navy-night/10 text-navy-night rounded-full flex items-center justify-center font-bold text-lg mb-8 font-headline">
                 03
               </div>
-              <h3 className="text-3xl font-headline text-white mb-2">
+              <h3 className="text-3xl font-headline text-navy-night mb-2">
                 Retail Partnership
               </h3>
-              <div className="text-white font-bold uppercase tracking-wider text-sm mb-4">
+              <div className="text-navy-night font-bold uppercase tracking-wider text-sm mb-4">
                 RETAILERS, BOUTIQUES &amp; CONCEPT STORES
               </div>
               <div className="mb-6">
-                <span className="bg-white/20 text-white px-3 py-1 rounded-full font-medium text-xs">
+                <span className="bg-navy-night/10 text-navy-night px-3 py-1 rounded-full font-medium text-xs">
                   Boutiques · Stores · Retail
                 </span>
               </div>
-              <p className="text-white/90 text-lg leading-relaxed mb-8">
+              <p className="text-navy-night/90 text-lg leading-relaxed mb-8">
                 Add a strong-margin product to your shelves with zero complexity.
                 Order by the pair, not the pallet. We handle stock management and
                 make reordering effortless.
               </p>
-              <div className="border-t border-white/20 pt-8 mb-8 space-y-4 flex-grow">
+              <div className="border-t border-navy-night/10 pt-8 mb-8 space-y-4 flex-grow">
                 {[
                   "Order by pair — no pallet commitments",
                   "Strong margins on ready-to-sell stock",
@@ -336,19 +336,19 @@ export default function App() {
                   "Small display footprint, big returns",
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start">
-                    <div className="w-6 h-6 rounded-full bg-white/20 text-white flex items-center justify-center mt-0.5 mr-4 flex-shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-navy-night/10 text-navy-night flex items-center justify-center mt-0.5 mr-4 flex-shrink-0">
                       <Check className="w-[14px] h-[14px]" strokeWidth={3} />
                     </div>
-                    <span className="text-white font-medium text-lg">{item}</span>
+                    <span className="text-navy-night font-medium text-lg">{item}</span>
                   </div>
                 ))}
               </div>
               <a
-                className="bg-white hover:bg-white/90 text-coral rounded-xl p-5 flex justify-between items-center transition-colors font-bold text-lg group mt-auto"
+                className="bg-navy-night hover:bg-navy-night/90 text-white rounded-xl p-5 flex justify-between items-center transition-colors font-bold text-lg group mt-auto"
                 href="#"
               >
                 Inquire Now
-                <div className="w-8 h-8 bg-coral text-white rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform">
+                <div className="w-8 h-8 bg-white text-navy-night rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform">
                   <ArrowRight className="w-4 h-4" />
                 </div>
               </a>
