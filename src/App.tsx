@@ -156,6 +156,13 @@ export default function App() {
       </section>
 
       {/* 6 Boxes Grid */}
+      <section className="relative w-full">
+        <div className="bg-navy-night py-20 px-4">
+          <h2 className="text-4xl md:text-[48px] font-headline text-white text-center leading-tight uppercase">
+            WHY SOCKSAT BUSINESS
+          </h2>
+        </div>
+      </section>
       <section className="w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full">
           {[
