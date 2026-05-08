@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Check, ArrowRight, ArrowUp, Facebook, Instagram, Linkedin, Paintbrush, Scissors, Gift } from "lucide-react";
 import { motion } from "motion/react";
+import { EnquiryModal } from "./EnquiryModal";
 
 const SockIcon = ({ size = 24, className = "", strokeWidth = 2 }: { size?: number, className?: string, strokeWidth?: number }) => (
   <svg 
@@ -64,6 +65,7 @@ function AnimatedNumber({ value, suffix = "", prefix = "", duration = 2000 }: { 
 
 export default function App() {
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [enquiryOpen, setEnquiryOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -116,7 +118,7 @@ export default function App() {
               CLIENTS
             </a>
           </div>
-          <button className="hidden md:inline-flex bg-gradient-to-br from-primary to-primary-container text-white px-6 py-3 rounded uppercase tracking-widest text-sm font-bold hover:opacity-90 transition-opacity">
+          <button onClick={() => setEnquiryOpen(true)} className="hidden md:inline-flex bg-gradient-to-br from-primary to-primary-container text-white px-6 py-3 rounded uppercase tracking-widest text-sm font-bold hover:opacity-90 transition-opacity">
             ENQUIRE NOW
           </button>
         </div>
@@ -136,7 +138,7 @@ export default function App() {
               with precision, manufactured locally.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-gradient-to-br from-primary to-primary-container text-white px-8 py-4 rounded text-lg font-bold uppercase tracking-wider hover:shadow-[0_20px_40px_rgba(9,29,46,0.2)] transition-all">
+              <button onClick={() => setEnquiryOpen(true)} className="bg-gradient-to-br from-primary to-primary-container text-white px-8 py-4 rounded text-lg font-bold uppercase tracking-wider hover:shadow-[0_20px_40px_rgba(9,29,46,0.2)] transition-all">
                 ENQUIRE NOW
               </button>
               <button className="bg-surface-container-high text-primary px-8 py-4 rounded text-lg font-bold uppercase tracking-wider hover:bg-surface-variant transition-colors">
@@ -250,15 +252,16 @@ export default function App() {
                   </div>
                 ))}
               </div>
-              <a
-                className="bg-white hover:bg-white/90 text-navy-night rounded-xl p-5 flex justify-between items-center transition-colors font-bold text-lg group mt-auto"
-                href="#"
+              <button
+                type="button"
+                className="bg-white hover:bg-white/90 text-navy-night rounded-xl p-5 w-full flex justify-between items-center transition-colors font-bold text-lg group mt-auto"
+                onClick={() => setEnquiryOpen(true)}
               >
                 Inquire Now
                 <div className="w-8 h-8 bg-navy-night text-white rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform">
                   <ArrowRight className="w-4 h-4" />
                 </div>
-              </a>
+              </button>
             </div>
           </div>
 
@@ -300,15 +303,16 @@ export default function App() {
                   </div>
                 ))}
               </div>
-              <a
-                className="bg-white hover:bg-white/90 text-primary rounded-xl p-5 flex justify-between items-center transition-colors font-bold text-lg group mt-auto"
-                href="#"
+              <button
+                type="button"
+                className="bg-white hover:bg-white/90 text-primary rounded-xl p-5 w-full flex justify-between items-center transition-colors font-bold text-lg group mt-auto"
+                onClick={() => setEnquiryOpen(true)}
               >
                 Inquire Now
                 <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform">
                   <ArrowRight className="w-4 h-4" />
                 </div>
-              </a>
+              </button>
             </div>
           </div>
 
@@ -350,15 +354,16 @@ export default function App() {
                   </div>
                 ))}
               </div>
-              <a
-                className="bg-navy-night hover:bg-navy-night/90 text-white rounded-xl p-5 flex justify-between items-center transition-colors font-bold text-lg group mt-auto"
-                href="#"
+              <button
+                type="button"
+                className="bg-navy-night hover:bg-navy-night/90 text-white rounded-xl p-5 w-full flex justify-between items-center transition-colors font-bold text-lg group mt-auto"
+                onClick={() => setEnquiryOpen(true)}
               >
                 Inquire Now
                 <div className="w-8 h-8 bg-white text-navy-night rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform">
                   <ArrowRight className="w-4 h-4" />
                 </div>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -661,6 +666,7 @@ export default function App() {
         </button>
       )}
       
+      <EnquiryModal isOpen={enquiryOpen} onClose={() => setEnquiryOpen(false)} />
     </div>
   );
 }
