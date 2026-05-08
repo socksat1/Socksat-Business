@@ -555,48 +555,21 @@ export default function App() {
               </p>
             </div>
           </div>
-          {/* Right Side (Form) */}
-          <div className="w-full md:w-1/2 p-6 md:p-10 lg:p-20 bg-surface-container-lowest flex items-center justify-center">
-            <div className="w-full max-w-lg">
-              <form className="space-y-6">
-                <div>
-                  <label className="block text-sm font-bold text-on-surface uppercase tracking-widest mb-2 font-label">
-                    Full Name
-                  </label>
-                  <input
-                    className="w-full bg-surface-container-low border-none rounded p-4 text-on-surface focus:ring-2 focus:ring-primary/40 focus:bg-surface-container-lowest transition-all"
-                    placeholder="Jane Doe"
-                    type="text"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-bold text-on-surface uppercase tracking-widest mb-2 font-label">
-                    Company Email
-                  </label>
-                  <input
-                    className="w-full bg-surface-container-low border-none rounded p-4 text-on-surface focus:ring-2 focus:ring-primary/40 focus:bg-surface-container-lowest transition-all"
-                    placeholder="jane@company.com"
-                    type="email"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-bold text-on-surface uppercase tracking-widest mb-2 font-label">
-                    Project Details
-                  </label>
-                  <textarea
-                    className="w-full bg-surface-container-low border-none rounded p-4 text-on-surface focus:ring-2 focus:ring-primary/40 focus:bg-surface-container-lowest transition-all resize-none"
-                    placeholder="Tell us about your timeline and design ideas..."
-                    rows={4}
-                  ></textarea>
-                </div>
-                <button
-                  className="w-full bg-on-background text-white py-4 rounded font-bold uppercase tracking-widest hover:bg-primary transition-colors mt-4"
-                  type="button"
-                >
-                  Submit Enquiry
-                </button>
-              </form>
-            </div>
+          {/* Right Side (Image & CTA) */}
+          <div className="relative w-full md:w-1/2 min-h-[400px]">
+             <img 
+               src="https://i.postimg.cc/fLCK6M0q/letstartwithapairofsocks.png" 
+               alt="Stack of vibrant custom socks" 
+               className="absolute inset-0 w-full h-full object-cover"
+             />
+             <div className="absolute inset-0 bg-navy-night/30 flex items-center justify-center p-6 backdrop-blur-[2px]">
+               <button 
+                 onClick={() => setEnquiryOpen(true)}
+                 className="bg-transparent border-2 border-white text-white px-8 py-4 rounded text-lg font-bold uppercase tracking-wider hover:bg-white/10 transition-colors shadow-2xl"
+               >
+                 ENQUIRE NOW
+               </button>
+             </div>
           </div>
         </div>
       </section>
