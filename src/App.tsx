@@ -157,32 +157,29 @@ export default function App() {
         </div>
       </section>
 
-      {/* 6 Boxes Grid */}
-      <section className="relative w-full">
-        <div className="bg-navy-night py-20 px-4">
-          <h2 className="text-4xl md:text-[48px] font-headline text-white text-center leading-tight uppercase">
+      {/* Why Socksat Business */}
+      <section className="relative w-full bg-coral py-20 px-4">
+        <div className="max-w-5xl mx-auto flex flex-col items-center">
+          <h2 className="text-4xl md:text-[48px] font-headline text-white text-center leading-tight uppercase mb-12">
             WHY SOCKSAT BUSINESS
           </h2>
-        </div>
-      </section>
-      <section className="w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full">
-          {[
-            { title: "Fast Fulfillment", bg: "bg-coral", text: "text-white" },
-            { title: "Flexible Pricing", bg: "bg-white", text: "text-on-background" },
-            { title: "100% Custom", bg: "bg-tertiary-container", text: "text-navy-night" },
-            { title: "Low MOQs", bg: "bg-primary-container", text: "text-white" },
-            { title: "Made in Jordan", bg: "bg-navy-night", text: "text-white" },
-            { title: "Premium Quality", bg: "bg-primary", text: "text-white" },
-          ].map((item, idx) => (
-            <div
-              key={idx}
-              className={`${item.bg} p-12 transition-all flex flex-row items-center gap-6 justify-center h-48 md:h-60 lg:h-[30vh]`}
-            >
-              <Check className={`w-8 h-8 shrink-0 ${item.text}`} strokeWidth={3} />
-              <h4 className={`font-bold text-3xl ${item.text}`}>{item.title}</h4>
-            </div>
-          ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-12 w-full px-4 md:px-12 lg:px-0">
+            {[
+              "Fast Fulfillment",
+              "Flexible Pricing",
+              "100% Custom",
+              "Low MOQs",
+              "Made in Jordan",
+              "Premium Quality",
+            ].map((item, idx) => (
+              <div key={idx} className="flex items-start items-center">
+                <div className="w-6 h-6 rounded-full bg-white/20 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <Check className="w-[14px] h-[14px]" strokeWidth={3} />
+                </div>
+                <span className="text-white font-medium text-[22px]">{item}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
